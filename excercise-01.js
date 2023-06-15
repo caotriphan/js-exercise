@@ -1,7 +1,6 @@
-const getFirstValue = [1, 2, 3];
-const getFirstValue1 = [80, 5, 100];
-const getFirstValue2 = [-500, 0, 50];
+function calcAge(ageInYear) {
+  const ageInDay = ageInYear * 365;
+  return ageInDay;
+};
 
-console.log(getFirstValue.shift()); // 1
-console.log(getFirstValue1.shift()); // 80
-console.log(getFirstValue2.shift()); // -500
+calcAge(20);
