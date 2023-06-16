@@ -173,3 +173,12 @@ addUp(4); // 1+2+3+4=11
 const matchStick = (step) => (step * 6) - (step - 1);
 
 matchStick(4) // (4*6)-(4-1)=21
+
+/**
+ * Write a function that mimics (without the use of <<) the left shift operator and returns the result from the two given integers.
+ * https://edabit.com/challenge/pB6CF3rFBi8ykJ3Br
+ * @param {*} num1
+ * @param {*} num2
+ * @returns
+ */
+const shiftToLeft = (num1, num2) => num1 * Math.pow(2, num2);
