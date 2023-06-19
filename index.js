@@ -60,7 +60,7 @@ const power = (voltage, current) => { return voltage * current };
 power(4, 6) //24
 
 //Maximum Edge of a Triangle
-const power = (side1, side2) => { return console.log(`The Maximum range of a triangle's third edge is ${Math.floor((side1 + side2) - 1)}`) };
+// const power = (side1, side2) => { return console.log(`The Maximum range of a triangle's third edge is ${Math.floor((side1 + side2) - 1)}`) };
 power(7, 10) //The maximum range of a triangle's third edge is 16
 
 // Return the Remainder from Two Numbers
@@ -182,3 +182,118 @@ matchStick(4) // (4*6)-(4-1)=21
  * @returns
  */
 const shiftToLeft = (num1, num2) => num1 * Math.pow(2, num2);
+
+/**
+ * get weekday from given number day
+ * @param {number} num the weekday in number
+ * @returns weekday in string
+ */
+const getWeekDay = num => {
+  switch (num) {
+    case 0: return 'Sunday';
+    case 1: return 'Monday';
+    case 2: return 'Tuesday';
+    case 3: return 'Wednesday';
+    case 4: return 'Thurday';
+    case 5: return 'Friday';
+    case 6: return 'Saturday';
+  }
+};
+// console.log(`Today is ${getWeekDay}`);
+
+/**
+ * get AM or PM based on given date time
+ * @param {number} hour the hour
+ * @returns AM or PM
+ */
+const getAmPm = (hour) => hour >= 12 ? 'PM' : 'AM';
+
+/**
+ * return hour in 12h format
+ * @param {number} hour the number of hour
+ * @returns hour in 12h format
+ */
+const getHour12 = hour => hour - 12;
+
+/**
+ * Write a JavaScript program to display the current day and time in the following format.
+* Sample Output : Today is : Tuesday.
+* Current time is : 10 PM : 30 : 38
+ * @param {*} date
+ */
+const printDate = (date) => {
+  const weekday = getWeekDay(date.getDay()); // 0 -> Sunday, 1 = Monday, ...
+  const hour = date.getHours();
+
+  console.log(`Today is : ${weekday}.
+  Current time is : ${getHour12(hour)} ${getAmPm(hour)} : ${date.getMinutes()} : ${date.getSeconds()}`);
+}
+
+// const hour = printDay.getHours();
+// const minute = printDay.getMinutes();
+// const second = printDay.getSeconds();
+// const noonOrNot = (hour >= 12) ? 'PM' : 'AM';
+//     hour = (hour >= 12) ? hour - 12 : hour;
+
+printDate(new Date()); //? print current date
+
+/**
+ *  Write a JavaScript program to print the current window contents.
+ */
+const printCurrentWindowContents = () => window.print();
+
+/**
+ * Write a JavaScript program to get the current date.
+*/
+const printDay = (today) => {
+  // const  = ;
+  const dd = today.getDate();
+  const mm = today.getMonth() + 1;
+  const yyyy = today.getFullYear(); //?
+  // dd //?
+
+  console.log(`Today is: ${mm}-${dd}-${yyyy}`);
+  console.log(`Today is: ${mm}/${dd}/${yyyy}`);
+  console.log(`Today is: ${dd}-${mm}-${yyyy}`);
+  console.log(`Today is: ${dd}/${mm}/${yyyy}`);
+
+}
+
+printDay(new Date());
+printDay(new Date(1996, 11, 22));
+
+/**
+ * Write a JavaScript program to find the area of a triangle where three sides are 5, 6, 7.
+ */
+//?
+const areaTriangle = (num1, num2, num3) => {
+  const p = (num1 + num2 + num3) / 2;
+  return Math.sqrt(p * (p - num1) * (p - num2) * (p - num3));
+}
+areaTriangle(5, 6, 7)
+
+/**
+ * Write a JavaScript program to find out if 1st January will be a Sunday between 2014 and 2050.
+ */
+function findYearJan01() {
+  let year = 2015;
+  while (year <= 2050) {
+    if (new Date(year, 0, 1).getDay() === 0) {
+      return year;
+    }
+    year++;
+  }
+  return 0;
+}
+console.log(findYearJan01())
+
+/**
+ * Write a JavaScript program where the program takes a random integer between 1 and 10, and the user is then prompted to input a guess number.
+ * The program displays a message "Good Work" if the input matches the guess number otherwise "Not matched".
+ */
+function comparedNum(guessNumber) {
+  const randomNum = Math.floor(Math.random() * 10);
+  return guessNumber === randomNum ? 'Good Work' : 'Not Matched';
+}
+console.log(comparedNum(4))
+//comparedNum(Number(prompt('enter a number from 1 to 10')))
