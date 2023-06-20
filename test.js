@@ -64,3 +64,15 @@ test('Giving somthing should work', () => {
   expect(lib.giveMeSomething('something')).toBe('Something something');
   expect(lib.giveMeSomething('is better tha nothing')).toBe('Something is better tha nothing');
 });
+
+test('Squared number should work', () => {
+  expect(lib.squaredNumber(2)).toBe(4);
+  expect(lib.squaredNumber(4)).toBe(16);
+  expect(lib.squaredNumber(5)).toBe(25);
+});
+
+test('Less than or equal to zero should work', () => {
+  expect(lib.lessThanOrEqualToZero(4)).toBe(false);
+  expect(lib.lessThanOrEqualToZero(0)).toBe(true);
+  expect(lib.lessThanOrEqualToZero(-2)).toBe(true);
+});

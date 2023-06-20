@@ -49,17 +49,10 @@ const findPerimeter = (width, height) => { return (width + height) * 2 };
 const giveMeSomething = (a) => { return `Something ${a}` };
 
 // Correct the mistakes
-const squared = (number) => { return number * number };
-
-squared(9); // 81
-squared(2); // 4
-squared(7); // 49
+const squaredNumber = (number) => { return number * number };
 
 // Is the Number Less than or Equal to Zero?
 const lessThanOrEqualToZero = (number) => { return number <= 0 ? true : false };
-
-lessThanOrEqualToZero(3) // false
-lessThanOrEqualToZero(-1) // true
 
 // Sum of Polygon Angles
 const sumPolygon = (number) => { return number > 2 ? (number - 2) * 180 : undefined };
@@ -375,4 +368,7 @@ module.exports = {
   remainder,
   findPerimeter,
   giveMeSomething,
+  squaredNumber,
+  lessThanOrEqualToZero,
+
 }
