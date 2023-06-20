@@ -1,5 +1,5 @@
 // 1. Return the Next Number from the Integer Passed
-const addition = (num) => num += 1;
+export const addition = (num) => num += 1;
 
 addition(1);
 addition(10);
