@@ -107,8 +107,6 @@ function addUp(num) {
   }
   return sum;
 }
-addUp(4); // 1+2+3+4=11
-
 
 /**
  * Create a function that takes a number (step) as an argument and returns the number of matchsticks in that step
@@ -361,4 +359,5 @@ module.exports = {
   basicVariableAssignment,
   bitwAND,
   bitwOR,
+  addUp,
 }

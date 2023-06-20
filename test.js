@@ -106,3 +106,9 @@ test('OR should work', () => {
   expect(lib.bitwOR(6, 23)).toBe(23);
   expect(lib.bitwOR(1, 7)).toBe(7);
 });
+
+test('Addup should work', () => {
+  expect(lib.addUp(4)).toBe(10);
+  expect(lib.addUp(6)).toBe(21);
+  expect(lib.addUp(3)).toBe(6);
+});
