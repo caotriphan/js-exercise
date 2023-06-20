@@ -163,3 +163,9 @@ test('Given Number should work', () => {
   expect(lib.givenNum(9)).toBe(4);
   expect(lib.givenNum(34)).toBe(42);
 });
+
+test('summing of 2 integer should work', () => {
+  expect(lib.sumOfTwoIntegers(4, 4)).toBe(24);
+  expect(lib.sumOfTwoIntegers(3, 4)).toBe(7);
+  expect(lib.sumOfTwoIntegers(5, 6)).toBe(11);
+});

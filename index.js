@@ -284,8 +284,8 @@ const convertCToF = (celcius) => fahrenheit = (((celcius * 9) / 5) + 32);
  * if the number is broader than 13 return double the absolute difference.
  */
 const givenNum = (number2) => number2 > 13 ? (number2 - 13) * 2 : (13 - number2);
-const q = givenNum(34);
-q
+// const q = givenNum(34);
+// q
 
 /**
  * Write a JavaScript program to compute the sum of the two given integers.
@@ -365,4 +365,5 @@ module.exports = {
   convertFToC,
   convertCToF,
   givenNum,
+  sumOfTwoIntegers,
 }
