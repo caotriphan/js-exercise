@@ -155,20 +155,21 @@ const getAmPm = (hour) => hour >= 12 ? 'PM' : 'AM';
  * @param {number} hour the number of hour
  * @returns hour in 12h format
  */
-const getHour12 = hour => hour - 12;
+const getHour12 = hour => hour > 12 ? hour - 12 : hour;
 
+const get2DigitTime = n => n < 10 ? n.toString().padStart(2, '0') : n.toString()
 /**
  * Write a JavaScript program to display the current day and time in the following format.
 * Sample Output : Today is : Tuesday.
 * Current time is : 10 PM : 30 : 38
- * @param {*} date
+ * @param {Date} date
  */
 const printDate = (date) => {
   const weekday = getWeekDay(date.getDay()); // 0 -> Sunday, 1 = Monday, ...
   const hour = date.getHours();
 
   return `Today is : ${weekday}.
-  Current time is : ${getHour12(hour)} ${getAmPm(hour)} : ${date.getMinutes()} : ${date.getSeconds()}`;
+  Current time is : ${get2DigitTime(getHour12(hour))} ${getAmPm(hour)} : ${get2DigitTime(date.getMinutes())} : ${get2DigitTime(date.getSeconds())}`;
 }
 
 // const hour = printDay.getHours();
@@ -360,4 +361,5 @@ module.exports = {
   addUp,
   matchStick,
   shiftToLeft,
+  printDate,
 }

@@ -124,3 +124,12 @@ test('Shift to left should work', () => {
   expect(lib.shiftToLeft(6, 8)).toBe(1536);
   expect(lib.shiftToLeft(2, 9)).toBe(1024);
 });
+
+test('Printing day should work', () => {
+  expect(lib.printDate(new Date(2023, 5, 20))).toBe(`Today is : Tuesday.
+  Current time is : 00 AM : 00 : 00`);
+  expect(lib.printDate(new Date(2023, 5, 20, 13, 5))).toBe(`Today is : Tuesday.
+  Current time is : 01 PM : 05 : 00`);
+  expect(lib.printDate(new Date(2023, 5, 19, 23, 15, 50))).toBe(`Today is : Monday.
+  Current time is : 11 PM : 15 : 50`);
+});
