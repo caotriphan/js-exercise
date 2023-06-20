@@ -47,3 +47,20 @@ test('Maximun edge of triangle should work', () => {
   expect(lib.maximumEdgeOfTriangle(6, 8)).toBe("The Maximum range of a triangle's third edge is 13");
   expect(lib.maximumEdgeOfTriangle(10, 12)).toBe("The Maximum range of a triangle's third edge is 21");
 });
+
+test('Remainder should work', () => {
+  expect(lib.remainder(2, 3)).toBe(2);
+  expect(lib.remainder(-6, 8)).toBe(-6);
+  expect(lib.remainder(10, 10)).toBe(0);
+});
+
+test('Finding perimeter of a Rectangle should work', () => {
+  expect(lib.findPerimeter(2, 4)).toBe(12);
+  expect(lib.findPerimeter(6, 8)).toBe(28);
+  expect(lib.findPerimeter(10, 12)).toBe(44);
+});
+
+test('Giving somthing should work', () => {
+  expect(lib.giveMeSomething('something')).toBe('Something something');
+  expect(lib.giveMeSomething('is better tha nothing')).toBe('Something is better tha nothing');
+});

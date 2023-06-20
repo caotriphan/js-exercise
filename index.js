@@ -42,20 +42,11 @@ const maximumEdgeOfTriangle = (side1, side2) => `The Maximum range of a triangle
 // Return the Remainder from Two Numbers
 const remainder = (num1, num2) => { return num1 % num2 };
 
-remainder(1, 3); // 1
-remainder(-9, 45); // -9
-remainder(5, 5) // 0
-
 // Find the Perimeter of a Rectangle
 const findPerimeter = (width, height) => { return (width + height) * 2 };
 
-findPerimeter(6, 7); // 26
-findPerimeter(2, 9); // 22
-findPerimeter(10, 20); // 60
-
 // Return Something to Me!
 const giveMeSomething = (a) => { return `Something ${a}` };
-giveMeSomething('is better than nothing'); // Something is better than nothing
 
 // Correct the mistakes
 const squared = (number) => { return number * number };
@@ -381,4 +372,7 @@ module.exports = {
   cubesANumber,
   powerCalculator,
   maximumEdgeOfTriangle,
+  remainder,
+  findPerimeter,
+  giveMeSomething,
 }
