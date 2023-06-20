@@ -76,3 +76,9 @@ test('Less than or equal to zero should work', () => {
   expect(lib.lessThanOrEqualToZero(0)).toBe(true);
   expect(lib.lessThanOrEqualToZero(-2)).toBe(true);
 });
+
+test('SumPolygon should work', () => {
+  expect(lib.sumPolygon(2)).toBe(undefined);
+  expect(lib.sumPolygon(4)).toBe(360);
+  expect(lib.sumPolygon(5)).toBe(540);
+});

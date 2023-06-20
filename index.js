@@ -370,5 +370,6 @@ module.exports = {
   giveMeSomething,
   squaredNumber,
   lessThanOrEqualToZero,
+  sumPolygon,
 
 }
