@@ -133,3 +133,9 @@ test('Printing day should work', () => {
   expect(lib.printDate(new Date(2023, 5, 19, 23, 15, 50))).toBe(`Today is : Monday.
   Current time is : 11 PM : 15 : 50`);
 });
+
+test('Area of a triangle should work', () => {
+  expect(lib.areaTriangle(4, 3, 5)).toBe(6);
+  expect(lib.areaTriangle(6, 10, 8)).toBe(24);
+  expect(lib.areaTriangle(6, 7, 9)).toBe(20.97617696340303);
+});

@@ -178,7 +178,7 @@ const printDate = (date) => {
 // const noonOrNot = (hour >= 12) ? 'PM' : 'AM';
 //     hour = (hour >= 12) ? hour - 12 : hour;
 
-printDate(new Date()); //? print current date
+// printDate(new Date()); //? print current date
 
 /**
  *  Write a JavaScript program to print the current window contents.
@@ -203,8 +203,8 @@ const printDay = (today) => {
 
 }
 
-printDay(new Date());
-printDay(new Date(1996, 11, 22));
+// printDay(new Date());
+// printDay(new Date(1996, 11, 22));
 
 /**
  * Write a JavaScript program to find the area of a triangle where three sides are 5, 6, 7.
@@ -214,7 +214,6 @@ const areaTriangle = (num1, num2, num3) => {
   const p = (num1 + num2 + num3) / 2;
   return Math.sqrt(p * (p - num1) * (p - num2) * (p - num3));
 }
-areaTriangle(5, 6, 7)
 
 /**
  * Write a JavaScript program to find out if 1st January will be a Sunday between 2014 and 2050.
@@ -362,4 +361,5 @@ module.exports = {
   matchStick,
   shiftToLeft,
   printDate,
+  areaTriangle,
 }
