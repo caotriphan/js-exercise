@@ -1,10 +1,6 @@
 // 1. Return the Next Number from the Integer Passed
 const addition = (num) => num += 1;
 
-addition(1);
-addition(10);
-addition(-8);
-
 // 2. get first value
 const getFirstValue = [1, 2, 3];
 const getFirstValue1 = [80, 5, 100];
@@ -15,7 +11,7 @@ const getFirstValue2 = [-500, 0, 50];
 // console.log(getFirstValue2[0]); // -500
 
 // convert minute to seconds
-function convert(minutes) {
+function convertMintoSec(minutes) {
   return minutes * 60;
 }
 
@@ -24,7 +20,7 @@ function convert(minutes) {
 // console.log(convert(2));
 
 // covert hour to second
-function convert(hour) {
+function convertHourtoSec(hour) {
   return hour * 60 * 60;
 }
 
@@ -37,9 +33,9 @@ function calcAge(ageInYear) {
 calcAge(20);
 
 //return sum of two number
-const sum = (num1, num2) => { return num1 + num2 };
+const sumOf2Number = (num1, num2) => { return num1 + num2 };
 
-sum(2, 3); // 5
+sumOf2Number(2, 3); // 5
 
 // Area of a Triangle
 const triArea = (base, height) => { return (base * height) / 2 };
@@ -225,8 +221,8 @@ const printDate = (date) => {
   const weekday = getWeekDay(date.getDay()); // 0 -> Sunday, 1 = Monday, ...
   const hour = date.getHours();
 
-  console.log(`Today is : ${weekday}.
-  Current time is : ${getHour12(hour)} ${getAmPm(hour)} : ${date.getMinutes()} : ${date.getSeconds()}`);
+  return `Today is : ${weekday}.
+  Current time is : ${getHour12(hour)} ${getAmPm(hour)} : ${date.getMinutes()} : ${date.getSeconds()}`;
 }
 
 // const hour = printDay.getHours();
@@ -252,10 +248,11 @@ const printDay = (today) => {
   const yyyy = today.getFullYear(); //?
   // dd //?
 
-  console.log(`Today is: ${mm}-${dd}-${yyyy}`);
-  console.log(`Today is: ${mm}/${dd}/${yyyy}`);
-  console.log(`Today is: ${dd}-${mm}-${yyyy}`);
-  console.log(`Today is: ${dd}/${mm}/${yyyy}`);
+  // console.log(`Today is: ${ mm } -${ dd } -${ yyyy } `);
+  // console.log(`Today is: ${ mm } /${dd}/${ yyyy } `);
+  // console.log(`Today is: ${ dd } -${ mm } -${ yyyy } `);
+  // console.log(`Today is: ${ dd } /${mm}/${ yyyy }`);
+
 
 }
 
@@ -285,7 +282,7 @@ function findYearJan01() {
   }
   return 0;
 }
-console.log(findYearJan01())
+// console.log(findYearJan01())
 
 /**
  * Write a JavaScript program where the program takes a random integer between 1 and 10, and the user is then prompted to input a guess number.
@@ -295,9 +292,110 @@ function comparedNum(guessNumber) {
   const randomNum = Math.floor(Math.random() * 10);
   return guessNumber === randomNum ? 'Good Work' : 'Not Matched';
 }
-console.log(comparedNum(4))
+// console.log(comparedNum(4))
 //comparedNum(Number(prompt('enter a number from 1 to 10')))
+
+/**
+ * Write a JavaScript program to calculate the days left before Christmas
+ */
+function daysLeftToXmas(today) {
+  const xmasDay = new Date(today.getFullYear(), 11, 25);
+  xmasDay.setFullYear(today.getFullYear());
+  if (today > xmasDay) {
+    xmasDay.setFullYear(today.getFullYear() + 1);
+  }
+  return Math.floor((xmasDay - today) / (1000 * 60 * 60 * 24));
+}
+const left = daysLeftToXmas(new Date(2023, 11, 30));
+left
+
+/**
+ * Write a JavaScript program to calculate multiplication and division of two numbers (input from the user).
+ */
+const multi = (n1, n2) => n1 * n2;
+const result1 = multi(10, 12);
+result1
+
+const divis = (n3, n4) => n3 / n4;
+const result2 = divis(12, 10)
+result2
+
+/**
+ * Write a JavaScript program to convert temperatures to and from Celsius, Fahrenheit.
+[ Formula : c/5 = (f-32)/9 [ where c = temperature in Celsius and f = temperature in Fahrenheit ]
+Expected Output :
+60°C is 140 °F
+45°F is 7.222222222222222°C
+ */
+const convertFToC = (f) => c = ((f - 32) * 5) / 9;
+const r1 = convertFToC(80);
+r1
+const convertCToF = (celcius) => fahrenheit = ((celcius * 9) / 5) + 32;
+const r2 = convertCToF(28);
+r2
+
+/**
+ *  Write a JavaScript program to get the difference between a given number and 13,
+ * if the number is broader than 13 return double the absolute difference.
+ */
+const givenNum = (number2) => number2 > 13 ? (number2 - 13) * 2 : (13 - number2);
+const q = givenNum(34);
+q
+
+/**
+ * Write a JavaScript program to compute the sum of the two given integers.
+ * If the two values are the same, then return triple their sum.
+ */
+const sumOfTwoIntegers = (n5, n6) => n5 === n6 ? (n5 + n6) * 3 : (n5 + n6);
+const w = sumOfTwoIntegers(7, 7)
+w
+
+/**
+ * Write a JavaScript program to compute the absolute difference between a specified number and 19.
+ * Returns triple the absolute difference if the specified number is greater than 19.
+ */
+const diffNumerAnd19 = (n7) => n7 > 19 ? (n7 - 19) * 3 : '';
+const t = diffNumerAnd19(2)
+t
+
+/**
+ *  Write a JavaScript program to check a pair of numbers and return true if one of the numbers is 50 or if their sum is 50.
+ */
+const checkNumber = (n8, n9) => ((n8 + n9 === 50) || n8 === 50 || n9 === 50) ? true : '';
+const p = checkNumber(30, 20)
+p
+
+/**
+ *  Write a JavaScript program to check whether a given integer is within 20 of 100 or 400.
+ */
+const checkIntegerWithin20Of100Or400 = (n10) => Math.abs(100 - n10) <= 20 || Math.abs(400 - n10) <= 20 ? true : false;
+const l = checkIntegerWithin20Of100Or400(20);
+l
+
+/**
+ * Write a JavaScript program to check two given integers whether one is positive and another one is negative.
+ */
+const checkPosOrNeg = (n11, n12) => (n11 < 0 && n12 > 0) || (n11 > 0 && n12 < 0) ? true : false;
+
+/**
+ * Write a JavaScript program to create another string by adding "Py" in front of a given string.
+ * If the given string begins with "Py" return the original string.
+ */
+const createString = (originalString) => originalString.substring(0, 2) === 'Py' ? originalString : `Py${originalString}`;
+
+const m = createString('cachu');
+m
+
+/**
+ *  Write a JavaScript program to remove a character at the specified position in a given string and return the modified string.
+ */
+const removeCharacterOfString = (givenString, removePosition) => newString = givenString.split('').splice(removePosition).join('');
 
 module.exports = {
   addition,
+  convertMintoSec,
+  convertHourtoSec,
+  calcAge,
+  sumOf2Number,
+  triArea,
 }
