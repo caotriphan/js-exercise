@@ -34,8 +34,6 @@ const cubesANumber = (number1) => { return number1 * number1 * number1 };
 // Power Calculator
 const powerCalculator = (voltage, current) => { return voltage * current };
 
-powerCalculator(4, 6) //24
-
 //Maximum Edge of a Triangle
 const maximumEdgeOfTriangle = (side1, side2) => `The Maximum range of a triangle's third edge is ${Math.floor((side1 + side2) - 1)}`;
 
@@ -49,34 +47,22 @@ const findPerimeter = (width, height) => { return (width + height) * 2 };
 const giveMeSomething = (a) => { return `Something ${a}` };
 
 // Correct the mistakes
-const squaredNumber = (number) => { return number * number };
+const squaredNumber = (nu) => { return nu * nu };
 
 // Is the Number Less than or Equal to Zero?
-const lessThanOrEqualToZero = (number) => { return number <= 0 ? true : false };
+const lessThanOrEqualToZero = (number12) => { return number12 <= 0 ? true : false };
 
 // Sum of Polygon Angles
 const sumPolygon = (number) => { return number > 2 ? (number - 2) * 180 : undefined };
 
 // Basketball Points
-const points = (point1, point2) => { return ((point1 * 2) + (point2 * 3)) };
-
-points(1, 1); // 5
-points(7, 5); // 29
-points(38, 8); // 100
+const basketballPoints = (point1, point2) => { return ((point1 * 2) + (point2 * 3)) };
 
 // Basic Variable Assignment
-const result = (name) => { return `${name}edabit.` };
-
-result('Mubashir') // Mubashiredabit.
-result('Matt') // Mattedabit.
-result('javaScript') // javaScriptedabit.
+const basicVariableAssignment = (name) => { return `${name}edabit.` };
 
 // less than 100
 const lessThan100 = (number5, number6) => { return (number5 + number6) < 100 ? true : false };
-
-lessThan100(2, 7); // 9 - true
-lessThan100(20, 81); // 101 - false
-lessThan100(3, 77); // 80 - true
 
 /**
  *
@@ -371,5 +357,8 @@ module.exports = {
   squaredNumber,
   lessThanOrEqualToZero,
   sumPolygon,
-
+  basketballPoints,
+  basicVariableAssignment,
+  bitwAND,
+  bitwOR,
 }

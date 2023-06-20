@@ -82,3 +82,27 @@ test('SumPolygon should work', () => {
   expect(lib.sumPolygon(4)).toBe(360);
   expect(lib.sumPolygon(5)).toBe(540);
 });
+
+test('Basketball points should work', () => {
+  expect(lib.basketballPoints(1, 1)).toBe(5);
+  expect(lib.basketballPoints(7, 4)).toBe(26);
+  expect(lib.basketballPoints(2, 4)).toBe(16);
+});
+
+test('Basic variable assignment should work', () => {
+  expect(lib.basicVariableAssignment('something')).toBe('somethingedabit.');
+  expect(lib.basicVariableAssignment(7)).toBe('7edabit.');
+  expect(lib.basicVariableAssignment('Lucas')).toBe('Lucasedabit.');
+});
+
+test('AND should work', () => {
+  expect(lib.bitwAND(4, 3)).toBe(0);
+  expect(lib.bitwAND(6, 23)).toBe(6);
+  expect(lib.bitwAND(1, 7)).toBe(1);
+});
+
+test('OR should work', () => {
+  expect(lib.bitwOR(4, 3)).toBe(7);
+  expect(lib.bitwOR(6, 23)).toBe(23);
+  expect(lib.bitwOR(1, 7)).toBe(7);
+});
