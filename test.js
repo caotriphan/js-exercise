@@ -139,3 +139,27 @@ test('Area of a triangle should work', () => {
   expect(lib.areaTriangle(6, 10, 8)).toBe(24);
   expect(lib.areaTriangle(6, 7, 9)).toBe(20.97617696340303);
 });
+
+test('Finding year had 01 Jan is Sunday should work', () => {
+  expect(lib.findYearJan01(2015)).toBe(2017);
+  expect(lib.findYearJan01(2018)).toBe(2023);
+  expect(lib.findYearJan01(2024)).toBe(2034);
+});
+
+test('Covert F to C should work', () => {
+  expect(lib.convertFToC(86)).toBe('30.00');
+  expect(lib.convertFToC(72)).toBe('22.22');
+  expect(lib.convertFToC(120)).toBe('48.89');
+});
+
+test('Covert C to F should work', () => {
+  expect(lib.convertCToF(27)).toBe(80.6);
+  expect(lib.convertCToF(15)).toBe(59);
+  expect(lib.convertCToF(34)).toBe(93.2);
+});
+
+test('Given Number should work', () => {
+  expect(lib.givenNum(27)).toBe(28);
+  expect(lib.givenNum(9)).toBe(4);
+  expect(lib.givenNum(34)).toBe(42);
+});

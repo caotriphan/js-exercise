@@ -218,8 +218,7 @@ const areaTriangle = (num1, num2, num3) => {
 /**
  * Write a JavaScript program to find out if 1st January will be a Sunday between 2014 and 2050.
  */
-function findYearJan01() {
-  let year = 2015;
+function findYearJan01(year) {
   while (year <= 2050) {
     if (new Date(year, 0, 1).getDay() === 0) {
       return year;
@@ -259,12 +258,12 @@ left
  * Write a JavaScript program to calculate multiplication and division of two numbers (input from the user).
  */
 const multi = (n1, n2) => n1 * n2;
-const result1 = multi(10, 12);
-result1
+// const result1 = multi(10, 12);
+// result1
 
 const divis = (n3, n4) => n3 / n4;
-const result2 = divis(12, 10)
-result2
+// const result2 = divis(12, 10)
+// result2
 
 /**
  * Write a JavaScript program to convert temperatures to and from Celsius, Fahrenheit.
@@ -273,12 +272,12 @@ Expected Output :
 60°C is 140 °F
 45°F is 7.222222222222222°C
  */
-const convertFToC = (f) => c = ((f - 32) * 5) / 9;
-const r1 = convertFToC(80);
-r1
-const convertCToF = (celcius) => fahrenheit = ((celcius * 9) / 5) + 32;
-const r2 = convertCToF(28);
-r2
+const convertFToC = (f) => c = (((f - 32) * 5) / 9).toFixed(2);
+// const r1 = convertFToC(80);
+// r1
+const convertCToF = (celcius) => fahrenheit = (((celcius * 9) / 5) + 32);
+// const r2 = convertCToF(28);
+// r2
 
 /**
  *  Write a JavaScript program to get the difference between a given number and 13,
@@ -293,30 +292,30 @@ q
  * If the two values are the same, then return triple their sum.
  */
 const sumOfTwoIntegers = (n5, n6) => n5 === n6 ? (n5 + n6) * 3 : (n5 + n6);
-const w = sumOfTwoIntegers(7, 7)
-w
+// const w = sumOfTwoIntegers(7, 7)
+
 
 /**
  * Write a JavaScript program to compute the absolute difference between a specified number and 19.
  * Returns triple the absolute difference if the specified number is greater than 19.
  */
 const diffNumerAnd19 = (n7) => n7 > 19 ? (n7 - 19) * 3 : '';
-const t = diffNumerAnd19(2)
-t
+// const t = diffNumerAnd19(2)
+// t
 
 /**
  *  Write a JavaScript program to check a pair of numbers and return true if one of the numbers is 50 or if their sum is 50.
  */
 const checkNumber = (n8, n9) => ((n8 + n9 === 50) || n8 === 50 || n9 === 50) ? true : '';
-const p = checkNumber(30, 20)
-p
+// const p = checkNumber(30, 20)
+// p
 
 /**
  *  Write a JavaScript program to check whether a given integer is within 20 of 100 or 400.
  */
 const checkIntegerWithin20Of100Or400 = (n10) => Math.abs(100 - n10) <= 20 || Math.abs(400 - n10) <= 20 ? true : false;
-const l = checkIntegerWithin20Of100Or400(20);
-l
+// const l = checkIntegerWithin20Of100Or400(20);
+// l
 
 /**
  * Write a JavaScript program to check two given integers whether one is positive and another one is negative.
@@ -329,8 +328,8 @@ const checkPosOrNeg = (n11, n12) => (n11 < 0 && n12 > 0) || (n11 > 0 && n12 < 0)
  */
 const createString = (originalString) => originalString.substring(0, 2) === 'Py' ? originalString : `Py${originalString}`;
 
-const m = createString('cachu');
-m
+// const m = createString('cachu');
+// m
 
 /**
  *  Write a JavaScript program to remove a character at the specified position in a given string and return the modified string.
@@ -362,4 +361,8 @@ module.exports = {
   shiftToLeft,
   printDate,
   areaTriangle,
+  findYearJan01,
+  convertFToC,
+  convertCToF,
+  givenNum,
 }
