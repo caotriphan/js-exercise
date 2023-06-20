@@ -112,3 +112,9 @@ test('Addup should work', () => {
   expect(lib.addUp(6)).toBe(21);
   expect(lib.addUp(3)).toBe(6);
 });
+
+test('Matched sticks should work', () => {
+  expect(lib.matchStick(4)).toBe(21);
+  expect(lib.matchStick(6)).toBe(31);
+  expect(lib.matchStick(3)).toBe(16);
+});
