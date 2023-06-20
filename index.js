@@ -44,11 +44,11 @@ triArea(2, 3) // 3
 triArea(10, 10) //50
 
 //buggy code
-const cubes = (number1) => { return number1 * number1 * number1 };
+const cubesANumber = (number1) => { return number1 * number1 * number1 };
 
-cubes(3) // 9
-cubes(5) // 125
-cubes(10) // 1000
+cubesANumber(3) // 9
+cubesANumber(5) // 125
+cubesANumber(10) // 1000
 
 // Power Calculator
 const power = (voltage, current) => { return voltage * current };
@@ -398,4 +398,5 @@ module.exports = {
   calcAge,
   sumOf2Number,
   triArea,
+  cubesANumber
 }
