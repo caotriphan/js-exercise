@@ -359,4 +359,5 @@ module.exports = {
   bitwOR,
   addUp,
   matchStick,
+  shiftToLeft,
 }

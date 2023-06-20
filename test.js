@@ -118,3 +118,9 @@ test('Matched sticks should work', () => {
   expect(lib.matchStick(6)).toBe(31);
   expect(lib.matchStick(3)).toBe(16);
 });
+
+test('Shift to left should work', () => {
+  expect(lib.shiftToLeft(4, 3)).toBe(32);
+  expect(lib.shiftToLeft(6, 8)).toBe(1536);
+  expect(lib.shiftToLeft(2, 9)).toBe(1024);
+});
