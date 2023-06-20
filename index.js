@@ -6,18 +6,10 @@ const getFirstValue = [1, 2, 3];
 const getFirstValue1 = [80, 5, 100];
 const getFirstValue2 = [-500, 0, 50];
 
-// console.log(getFirstValue[0]); // 1
-// console.log(getFirstValue1[0]); // 80
-// console.log(getFirstValue2[0]); // -500
-
 // convert minute to seconds
 function convertMintoSec(minutes) {
   return minutes * 60;
 }
-
-// console.log(convert(5));
-// console.log(convert(3));
-// console.log(convert(2));
 
 // covert hour to second
 function convertHourtoSec(hour) {
@@ -30,34 +22,22 @@ function calcAge(ageInYear) {
   return ageInDay;
 };
 
-calcAge(20);
-
 //return sum of two number
 const sumOf2Number = (num1, num2) => { return num1 + num2 };
-
-sumOf2Number(2, 3); // 5
 
 // Area of a Triangle
 const triArea = (base, height) => { return (base * height) / 2 };
 
-triArea(2, 3) // 3
-triArea(10, 10) //50
-
 //buggy code
 const cubesANumber = (number1) => { return number1 * number1 * number1 };
 
-cubesANumber(3) // 9
-cubesANumber(5) // 125
-cubesANumber(10) // 1000
-
 // Power Calculator
-const power = (voltage, current) => { return voltage * current };
+const powerCalculator = (voltage, current) => { return voltage * current };
 
-power(4, 6) //24
+powerCalculator(4, 6) //24
 
 //Maximum Edge of a Triangle
-// const power = (side1, side2) => { return console.log(`The Maximum range of a triangle's third edge is ${Math.floor((side1 + side2) - 1)}`) };
-power(7, 10) //The maximum range of a triangle's third edge is 16
+const maximumEdgeOfTriangle = (side1, side2) => `The Maximum range of a triangle's third edge is ${Math.floor((side1 + side2) - 1)}`;
 
 // Return the Remainder from Two Numbers
 const remainder = (num1, num2) => { return num1 % num2 };
@@ -398,5 +378,7 @@ module.exports = {
   calcAge,
   sumOf2Number,
   triArea,
-  cubesANumber
+  cubesANumber,
+  powerCalculator,
+  maximumEdgeOfTriangle,
 }

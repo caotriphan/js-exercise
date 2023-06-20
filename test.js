@@ -29,3 +29,21 @@ test('Triangle Area should work', () => {
   expect(lib.triArea(6, 8)).toBe(24);
   expect(lib.triArea(10, 12)).toBe(60);
 });
+
+test('Cubing a number should work', () => {
+  expect(lib.cubesANumber(2)).toBe(8);
+  expect(lib.cubesANumber(6)).toBe(216);
+  expect(lib.cubesANumber(10)).toBe(1000);
+});
+
+test('Power calculation should work', () => {
+  expect(lib.powerCalculator(2, 3)).toBe(6);
+  expect(lib.powerCalculator(6, 8)).toBe(48);
+  expect(lib.powerCalculator(10, 12)).toBe(120);
+});
+
+test('Maximun edge of triangle should work', () => {
+  expect(lib.maximumEdgeOfTriangle(2, 3)).toBe("The Maximum range of a triangle's third edge is 4");
+  expect(lib.maximumEdgeOfTriangle(6, 8)).toBe("The Maximum range of a triangle's third edge is 13");
+  expect(lib.maximumEdgeOfTriangle(10, 12)).toBe("The Maximum range of a triangle's third edge is 21");
+});
