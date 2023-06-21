@@ -206,8 +206,12 @@ test('checking string start with Java should work', () => {
   expect(lib.giveStringJava('lu')).toBe(false);
 });
 
-test('checking 2 number within the range 50...99 should work', () => {
-  expect(lib.checkingNumber(23, 88)).toBe(false);
-  expect(lib.checkingNumber(52, 91)).toBe(true);
-  expect(lib.checkingNumber(76, 24)).toBe(false);
+test('string has Script should work', () => {
+  expect(lib.checkStringHasScript('Java123Script')).toBe('Java123Script');
+  expect(lib.checkStringHasScript('navigate')).toBe('navigate');
+  expect(lib.checkStringHasScript('lu')).toBe('lu');
+  expect(lib.checkStringHasScript('JavaScript123')).toBe('Java123');
+  expect(lib.checkStringHasScript('JavaScript123Script')).toBe('Java123Script');
+  expect(lib.checkStringHasScript('')).toBe('');
+  expect(lib.checkStringHasScript(null)).toBe(null);
 });

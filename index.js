@@ -385,8 +385,41 @@ const giveStringJava = (givenstring) => givenstring.substring(0, 4) == 'Java';
  * Write a JavaScript program to check whether two given integer values are in the range 50..99 (inclusive).
  * Return true if either of them falls within the range.
  */
-
 const checkingNumber = (number1, number2) => ((number1 >= 50 && number1 < +99) && (number2 >= 50 && number2 <= 99));
+
+/**
+ * Write a JavaScript program to check whether three given integer values are in the range 50..99 (inclusive).
+ * Return true if one or more of them are in the specified range.
+ */
+const checking3Number = (number1, number2, number3) => ((number1 >= 50 && number1 < +99) || (number2 >= 50 && number2 <= 99) || (number3 >= 50 && number3 <= 99));
+
+/**
+ * Write a JavaScript program to check whether a string "Script" appears at the 5th (index 4) position in a given string.
+ * If "Script" appears in the string, return the string without "Script" otherwise return the original one.
+ */
+
+function checkStringHasScript(givenString) {
+  if (!givenString) {
+    return givenString;
+  }
+
+  const newString = givenString.substring(4, 10);
+  if (newString !== 'Script') {
+    return givenString;
+  }
+
+  // jsvaScript123Script
+  let arr = givenString.split('');
+  arr.splice(4, 6); // => [s,c,r,i,p,t]
+  return arr.join(''); // => 'jsva123Script'
+}
+
+/**
+ *
+ */
+
+
+
 
 module.exports = {
   addition,
@@ -425,4 +458,5 @@ module.exports = {
   last3CharacterAddingFrontAndBack,
   giveStringJava,
   checkingNumber,
+  checkStringHasScript,
 }
