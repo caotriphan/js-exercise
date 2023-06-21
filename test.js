@@ -199,3 +199,9 @@ test('addinging 3 last character to front and back should work', () => {
   expect(lib.last3CharacterAddingFrontAndBack('navigate')).toBe('atenavigateate');
   expect(lib.last3CharacterAddingFrontAndBack('lu')).toBe(false);
 });
+
+test('checking string start with Java should work', () => {
+  expect(lib.giveStringJava('JavaScript')).toBe(true);
+  expect(lib.giveStringJava('navigate')).toBe(false);
+  expect(lib.giveStringJava('lu')).toBe(false);
+});

@@ -376,7 +376,10 @@ function last3CharacterAddingFrontAndBack(givenString) {
   }
 }
 
-
+/**
+ * Write a JavaScript program to check whether a string starts with 'Java' if it does not otherwise.
+ */
+const giveStringJava = (givenstring) => givenstring.substring(0, 4) == 'Java';
 
 module.exports = {
   addition,
@@ -413,4 +416,6 @@ module.exports = {
   changeFirstLastCharacter,
   addFirstCharacterFronAndBack,
   last3CharacterAddingFrontAndBack,
+  giveStringJava,
+
 }
