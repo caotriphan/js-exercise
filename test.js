@@ -193,3 +193,9 @@ test('addinging the first character to front and back should work', () => {
   expect(lib.addFirstCharacterFronAndBack('navigate')).toBe('nnavigaten');
   expect(lib.addFirstCharacterFronAndBack('lucas')).toBe('llucasl');
 });
+
+test('addinging 3 last character to front and back should work', () => {
+  expect(lib.last3CharacterAddingFrontAndBack('conversation')).toBe('ionconversationion');
+  expect(lib.last3CharacterAddingFrontAndBack('navigate')).toBe('atenavigateate');
+  expect(lib.last3CharacterAddingFrontAndBack('lu')).toBe(false);
+});

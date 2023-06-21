@@ -357,6 +357,27 @@ function addFirstCharacterFronAndBack(givenstring) {
   return (newstring + givenstring + newstring);
 }
 
+/**
+ * Write a JavaScript program to check whether a given positive number is a multiple of 3 or 7
+ */
+const checkNumber21 = (num1, num2) => (num1 > 0 && num2 > 0) && (num1 * num2 == 21);
+
+/**
+ * Write a JavaScript program to create a string from a given string.
+ * This is done by taking the last 3 characters and adding them at both the front and back.
+ * The string length must be 3 or more.
+ */
+function last3CharacterAddingFrontAndBack(givenString) {
+  if (givenString.length >= 3) {
+    stringLeft = givenString.substring(givenString.length - 3, givenString.length);
+    return (stringLeft + givenString + stringLeft);
+  } else {
+    return false;
+  }
+}
+
+
+
 module.exports = {
   addition,
   convertMintoSec,
@@ -391,4 +412,5 @@ module.exports = {
   checkNumber,
   changeFirstLastCharacter,
   addFirstCharacterFronAndBack,
+  last3CharacterAddingFrontAndBack,
 }
