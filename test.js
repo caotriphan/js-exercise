@@ -205,3 +205,9 @@ test('checking string start with Java should work', () => {
   expect(lib.giveStringJava('navigate')).toBe(false);
   expect(lib.giveStringJava('lu')).toBe(false);
 });
+
+test('checking 2 number within the range 50...99 should work', () => {
+  expect(lib.checkingNumber(23, 88)).toBe(false);
+  expect(lib.checkingNumber(52, 91)).toBe(true);
+  expect(lib.checkingNumber(76, 24)).toBe(false);
+});
