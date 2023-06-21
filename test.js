@@ -187,3 +187,9 @@ test('changing the first and last character position should work', () => {
   expect(lib.changeFirstLastCharacter('navigate')).toBe('eavigatn');
   expect(lib.changeFirstLastCharacter('lucas')).toBe('sucal');
 });
+
+test('addinging the first character to front and back should work', () => {
+  expect(lib.addFirstCharacterFronAndBack('conversation')).toBe('cconversationc');
+  expect(lib.addFirstCharacterFronAndBack('navigate')).toBe('nnavigaten');
+  expect(lib.addFirstCharacterFronAndBack('lucas')).toBe('llucasl');
+});

@@ -352,6 +352,10 @@ function changeFirstLastCharacter(givenstring) {
 /**
  * Write a JavaScript program to create another string from a given string with the first character of the given string added to the front and back
  */
+function addFirstCharacterFronAndBack(givenstring) {
+  newstring = givenstring.substring(0, 1);
+  return (newstring + givenstring + newstring);
+}
 
 module.exports = {
   addition,
@@ -386,4 +390,5 @@ module.exports = {
   diffNumerAnd19,
   checkNumber,
   changeFirstLastCharacter,
+  addFirstCharacterFronAndBack,
 }
