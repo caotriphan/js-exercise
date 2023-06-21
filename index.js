@@ -417,9 +417,9 @@ function checkStringHasScript(givenString) {
 /**
  *
  */
-
-
-
+function max3Numbers(n1, n2, n3) {
+  return n1;
+}
 
 module.exports = {
   addition,
@@ -459,4 +459,5 @@ module.exports = {
   giveStringJava,
   checkingNumber,
   checkStringHasScript,
+  max3Numbers,
 }

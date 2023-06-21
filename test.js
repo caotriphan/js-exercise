@@ -215,3 +215,10 @@ test('string has Script should work', () => {
   expect(lib.checkStringHasScript('')).toBe('');
   expect(lib.checkStringHasScript(null)).toBe(null);
 });
+
+test('max 3 numbers should work', () => {
+  expect(lib.max3Numbers(1,2,3)).toBe(3);
+  expect(lib.max3Numbers(1,1,1)).toBe(1);
+  expect(lib.max3Numbers(3,2,1)).toBe(3);
+  expect(lib.max3Numbers(3,2,3)).toBe(3);
+});
