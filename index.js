@@ -299,7 +299,7 @@ const sumOfTwoIntegers = (n5, n6) => n5 === n6 ? (n5 + n6) * 3 : (n5 + n6);
  * Write a JavaScript program to compute the absolute difference between a specified number and 19.
  * Returns triple the absolute difference if the specified number is greater than 19.
  */
-const diffNumerAnd19 = (n7) => n7 > 19 ? (n7 - 19) * 3 : '';
+const diffNumerAnd19 = (n7) => n7 > 19 ? (n7 - 19) * 3 : 19 - n7;
 // const t = diffNumerAnd19(2)
 // t
 
@@ -336,6 +336,23 @@ const createString = (originalString) => originalString.substring(0, 2) === 'Py'
  */
 const removeCharacterOfString = (givenString, removePosition) => newString = givenString.split('').splice(removePosition).join('');
 
+
+/**
+ * Write a JavaScript program to create a new string from a given string by changing the position of the first and last characters.
+ * The string length must be broader than or equal to 1.
+ */
+function changeFirstLastCharacter(givenstring) {
+  if (givenstring.length <= 1) {
+    return givenstring;
+  }
+  stringLeft = givenstring.substring(1, givenstring.length - 1);
+  return (givenstring[givenstring.length - 1]) + stringLeft + givenstring[0];
+}
+
+/**
+ * Write a JavaScript program to create another string from a given string with the first character of the given string added to the front and back
+ */
+
 module.exports = {
   addition,
   convertMintoSec,
@@ -366,4 +383,7 @@ module.exports = {
   convertCToF,
   givenNum,
   sumOfTwoIntegers,
+  diffNumerAnd19,
+  checkNumber,
+  changeFirstLastCharacter,
 }

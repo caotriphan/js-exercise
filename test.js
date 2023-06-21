@@ -169,3 +169,21 @@ test('summing of 2 integer should work', () => {
   expect(lib.sumOfTwoIntegers(3, 4)).toBe(7);
   expect(lib.sumOfTwoIntegers(5, 6)).toBe(11);
 });
+
+test('difference between number and 19 should work', () => {
+  expect(lib.diffNumerAnd19(27)).toBe(24);
+  expect(lib.diffNumerAnd19(15)).toBe(4);
+  expect(lib.diffNumerAnd19(22)).toBe(9);
+});
+
+test('checking number and 19 should work', () => {
+  expect(lib.checkNumber(20, 30)).toBe(true);
+  expect(lib.checkNumber(10, 50)).toBe(true);
+  expect(lib.checkNumber(40, 80)).toBe('');
+});
+
+test('changing the first and last character position should work', () => {
+  expect(lib.changeFirstLastCharacter('conversation')).toBe('nonversatioc');
+  expect(lib.changeFirstLastCharacter('navigate')).toBe('eavigatn');
+  expect(lib.changeFirstLastCharacter('lucas')).toBe('sucal');
+});
