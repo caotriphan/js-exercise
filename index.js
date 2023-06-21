@@ -418,7 +418,14 @@ function checkStringHasScript(givenString) {
  *
  */
 function max3Numbers(n1, n2, n3) {
-  return n1;
+  let arr = [n1, n2, n3];
+  let max = arr[0];
+  for (let i = 0; i < arr.length; i++) {
+    if (max < arr[i]) {
+      max = arr[i];
+    }
+  }
+  return max;
 }
 
 module.exports = {
