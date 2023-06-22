@@ -223,3 +223,46 @@ test('max 3 numbers should work', () => {
   expect(lib.max3Numbers(3,2,3)).toBe(3);
   expect(lib.max3Numbers(2, 1, 3)).toBe(3);
 });
+
+test('closest to 100 should work', () => {
+  expect(lib.closestValueto100(98, 20)).toBe(98);
+  expect(lib.closestValueto100(120, 210)).toBe(120);
+  expect(lib.closestValueto100(22, 89)).toBe(89);
+});
+
+test('checking number should work', () => {
+  expect(lib.checkGivenNumber(98, 20)).toBe(false);
+  expect(lib.checkGivenNumber(120, 210)).toBe(false);
+  expect(lib.checkGivenNumber(54, 89)).toBe(true);
+});
+
+test('finding the largest number should work', () => {
+  expect(lib.largestNumber(98, 20)).toBe('cannot find the largest one.');
+  expect(lib.largestNumber(43, 55)).toBe(55);
+  expect(lib.largestNumber(54, 89)).toBe('cannot find the largest one.');
+});
+
+test('finding charater should work', () => {
+  expect(lib.checkGivenString('abcd', 'b')).toBe(true);
+  expect(lib.checkGivenString('ab', 'b')).toBe(true);
+  expect(lib.checkGivenString('a', 'b')).toBe(false);
+  expect(lib.checkGivenString('b', 'b')).toBe(false);
+});
+
+test('checking 3 integer has the same last digit should work', () => {
+  expect(lib.give3Integer(123, 298743, 3)).toBe(true);
+  expect(lib.give3Integer(123, 23, 97329865)).toBe(false);
+  expect(lib.give3Integer(2346, 82375, 28736)).toBe(false);
+});
+
+test('upper-lower case should work', () => {
+  expect(lib.upperToLowerCase('ti')).toBe('TI');
+  expect(lib.upperToLowerCase('Tri')).toBe('tri');
+  expect(lib.upperToLowerCase('caotriphan')).toBe('cao');
+});
+
+test('Reverse case should work', () => {
+  expect(lib.reverseCase('ti')).toBe('TI');
+  expect(lib.reverseCase('Tri')).toBe('tRI');
+  expect(lib.reverseCase('caotriphan')).toBe('CAOTRIPHAN');
+});

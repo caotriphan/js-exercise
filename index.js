@@ -428,6 +428,384 @@ function max3Numbers(n1, n2, n3) {
   return max;
 }
 
+/**
+ * Write a JavaScript program to find the closest value to 100 from two numerical values.
+ */
+function closestValueto100(num1, num2) {
+  const val1 = Math.abs(100 - num1);
+  const val2 = Math.abs(100 - num2);
+  return val1 <= val2 ? num1 : num2;
+}
+
+/**
+ * Write a JavaScript program to check whether two numbers are in the range 40..60 or 70..100 inclusive.
+ */
+const checkGivenNumber = (num1, num2) =>
+  ((num1 >= 40 && num1 <= 60) || (num1 >= 70 && num1 <= 100))
+  &&
+  ((num2 >= 40 && num2 <= 60) || (num2 >= 70 && num2 <= 100));
+
+/**
+ * Write a JavaScript program to find the largest number from the two given positive integers.
+ * The two numbers are in the range 40..60 inclusive.
+ */
+const largestNumber = (num1, num2) =>
+  (num1 >= 40 && num1 <= 60) && (num2 >= 40 && num2 <= 60)
+    ?
+    num1 > num2 ? num1 : num2
+    :
+    'cannot find the largest one.'
+
+/**
+ * Write a program to check whether a specified character exists between the 2nd and 4th positions in a given string.
+ * @param {*} givenString
+ * @param {*} character
+ * @returns
+ */
+const checkGivenString = (givenString, character) => {
+  const sub = givenString.substring(1, 3);
+  return sub.includes(character);
+}
+
+/**
+ * Write a JavaScript program that checks whether the last digit of three positive integers is the same.
+ * @param {*} num1
+ * @param {*} num2
+ * @param {*} num3
+ * @returns
+ */
+function give3Integer(num1, num2, num3) {
+  const strnum1 = (num1).toString().at(-1);
+  const strnum2 = (num2).toString().at(-1);
+  const strnum3 = (num3).toString().at(-1);
+  return strnum1 == strnum2 && strnum1 == strnum3;
+}
+
+/**
+ *  Write a JavaScript program to produce a new string that has the first 3 characters in lower case from a given string.
+ * If the string length is less than 3 convert all the characters to upper case.
+ * @param {*} givenstring
+ * @returns
+ */
+function upperToLowerCase(givenstring) {
+  if (givenstring.length < 3) {
+    return givenstring.toUpperCase();
+  }
+  return givenstring.substring(0, 3).toLowerCase();
+}
+
+function reverseCase(givenString) {
+  const newarr = givenString.split('');
+  let result = '';
+  for (let i = 0; i < newarr.length; i++) {
+    if (newarr[i] === newarr[i].toUpperCase()) {
+      result += newarr[i].toLowerCase();
+    } else {
+      result += newarr[i].toUpperCase();
+    }
+  }
+
+  return result;
+}
+
+/**
+ * 39. Write a JavaScript program to compute the sum of the two given integers.
+ * If the sum is in the range 50..80 return 65 otherwise return 80.
+ * @param {*} num1
+ * @param {*} num2
+ * @returns
+ */
+const sum2num = (num1, num2) => {
+  const sum = num1 + num2;
+  return sum >= 50 && sum <= 80 ? 65 : 80;
+}
+
+/**
+ * 40. Write a JavaScript program to check from two given integers whether one of them is 8 or their sum or difference is 8.
+ * @param {*} num1
+ * @param {*} num2
+ * @returns
+ */
+const check2num = (num1, num2) =>
+  (num1 == 8 || num2 == 8)
+    ||
+    num1 + num2 == 8
+    ||
+    Math.abs(num1 - num2) == 8
+    ? true : false;
+
+/**
+ * 41. Write a JavaScript program to check a set of three numbers;
+ * if the three numbers are the same return 30; otherwise return 20; and if two numbers are the same return 40.
+ * @param {*} num1
+ * @param {*} num2
+ * @param {*} num3
+ * @returns
+ */
+function check3num(num1, num2, num3) {
+  if (num1 == num2 && num2 == num3) {
+    return 30
+  }
+
+  if (num1 == num2 || num1 == num3 || num2 == num3) {
+    return 40;
+  };
+
+  return 20
+}
+
+/**
+ * 43. Write a JavaScript program to check from three given numbers (non negative integers) that two or all of them have the same rightmost digit.
+ * @param {*} num1
+ * @param {*} num2
+ * @param {*} num3
+ * @returns
+ */
+function check3IntegerHaveSameRightmostDigit(num1, num2, num3) {
+  const RimoDi1 = (num1).toString().at(-1);
+  const RimoDi2 = (num2).toString().at(-1);
+  const RimoDi3 = (num3).toString().at(-1);
+  return (RimoDi1 == RimoDi2 && RimoDi1 == RimoDi3) || (RimoDi1 == RimoDi2 || RimoDi1 == RimoDi3 || RimoDi2 == RimoDi3);
+}
+
+/**
+ * 44. Write a JavaScript program to check from three given integers whether a number is greater than or equal to 20.
+ * It is less than the others.
+ * @param {*} num1
+ * @param {*} num2
+ * @param {*} num3
+ * @returns
+ */
+function check3IntegerNumber(num1, num2, num3) {
+  return (num1 >= 20 && (num1 < num2 || num1 < num3)) ||
+    (num2 >= 20 && (num2 < num1 || num2 < num3)) ||
+    (num3 >= 20 && (num3 < num2 || num3 < num1));
+}
+
+/**
+ * 45. Write a JavaScript program that checks two integer values and returns true if either one is 15 or if their sum or difference is 15.
+ * @param {*} num1
+ * @param {*} num2
+ * @returns
+ */
+const check2IntegerNumber = (num1, num2) => num1 == 15 || num2 == 15 || num1 + num2 == 15 || Math.abs(num1 - num2) == 15;
+
+/**
+ * 46. Write a JavaScript program to check two given non-negative integers if one (not both) is a multiple of 7 or 11
+ * @param {*} num1
+ * @param {*} num2
+ * @returns
+ */
+function check2PositiveIntegerNumber(num1, num2) {
+  if (num1 < 0 || num2 < 0) {
+    return 0;
+  }
+
+  return num1 % 7 == 0 || num1 % 11 == 0 || num2 % 7 == 0 || num2 % 11 == 0 ? true : false;
+}
+/**
+ * 48. Write a JavaScript program to reverse a given string.
+ * @param {*} givenString
+ * @returns
+ */
+function reverseString(givenString) {
+  const arr = givenString.split('');
+  return arr.reverse().join('');
+}
+
+/**
+ * 50. Write a JavaScript program to capitalize the first letter of each word in a given string.
+ * @param {*} newString
+ * @returns
+ */
+function capitalizeFirstLetter(newString) {
+  const arr = newString.split(' ');
+  let result = '';
+  for (let i = 0; i < arr.length; i++) {
+    result += arr[i][0].toUpperCase() + arr[i].substr(1) + ' ';
+  }
+  return result.trim();
+}
+
+// offer to use if more than one space appear in the string
+function capitalizeFirstLetter(newString) {
+  let result = newString[0].toUpperCase();
+  for (let i = 1; i < newString.length; i++) {
+    if (newString[i] !== ' ' && newString[i - 1] === ' ') {
+      result += newString[i].toUpperCase();
+    } else {
+      result += newString[i];
+    }
+  }
+
+  return result;
+}
+
+/**
+ * 52. Write a JavaScript program to convert letters of a given string alphabetically.
+ * @param {*} newString
+ * @returns
+ */
+function sortStringAlphabet(newString) {
+  const arr = newString.split('');
+  return arr.sort().join('');
+}
+
+/**
+ * 53. Write a JavaScript program to check whether the characters a and b are separated by exactly 3 places anywhere (at least once) in a given string.
+ * @param {*} newstring
+ * @returns
+ */
+const checkString = (newstring) => (/a...b/).test(newstring) || (/b...a/).test(newstring);
+
+/**
+ * 54. Write a JavaScript program to count the number of vowels in a given string.
+ * @param {*} newstring
+ * @returns
+ */
+const countVowel = (newstring) => newstring.match(/[euoai]/gi).length;
+
+/**
+ * 56. Write a JavaScript program to divide two positive numbers and return the result as string with properly formatted commas.
+ * @param {*} num1
+ * @param {*} num2
+ * @returns
+ */
+function givenInteNum(num1, num2) {
+  let div = (num1 / num2).toFixed(2);
+  return div.toString('');
+}
+
+/**
+ * 57. Write a JavaScript program to create one string of specified copies (positive numbers) of a given string.
+ * @param {*} givenString
+ * @param {*} number
+ * @returns
+ */
+function copyString(givenString, number) {
+  if (number <= 0) {
+    return givenstring
+  }
+
+  return givenString.repeat(number);
+}
+
+/**
+58. Write a JavaScript program to create an updated string of 4 copies of the last 3 characters of a given original string.
+The string length must be 3 and above.
+ *
+ * @param {*} originalString
+ * @returns
+ */
+function copy3LastGivenString(originalString) {
+  if (!originalString || originalString.length < 3) {
+    return originalString;
+  }
+  const newString = originalString.substring(originalString.length - 3);
+  return newString.repeat(4);
+}
+
+/**
+ * Write a JavaScript program to extract the first half of a even string.
+ * @param {*} givenString
+ * @returns
+ */
+function extract1HaftString(givenString) {
+  if (!givenString || givenString.length % 2 !== 0) {
+    return '';
+  }
+
+  return givenString.substring(0, givenString.length / 2)
+}
+
+/**
+ * 60. Write a JavaScript program to create a new string without the first and last characters of a given string.
+ * @param {*} givenString
+ * @returns
+ */
+const createNewString = (givenString) => givenString.substring(1, givenString.length - 1);
+
+/**
+ * 61. Write a JavaScript program to concatenate two strings except for their first character.
+ * @param {*} string1
+ * @param {*} string2
+ * @returns
+ */
+function concatenate2String(string1, string2) {
+  return string1.substring(1) + string2.substring(1);
+}
+
+/**
+ * 62. Write a JavaScript program to move the last three characters to the start of a given string.
+ * The string length must be greater than or equal to three.
+ * @param {*} givenString
+ * @returns
+ */
+function move3LastCharater(givenString) {
+
+  if (!givenString || givenString.length < 3) {
+    return '';
+  }
+
+  return givenString.substring(givenString.length - 3) + givenString.substring(0, givenString.length - 3);
+}
+
+/**
+ * 63. Write a JavaScript program to create a string using the middle three characters of a given string of odd length.
+ * The string length must be greater than or equal to three.
+ * @param {*} givenString
+ * @returns
+ */
+function getMiddleStringOddLength(givenString) {
+  if (!givenString || givenString.length % 2 == 0) {
+    return '';
+  }
+
+  const midCharater = (givenString.length + 1) / 2;
+  return givenString.substr(midCharater - 2, 3);
+}
+
+/**
+64. Write a JavaScript program to concatenate two strings and return the result.
+If the length of the strings does not match, then remove the characters from the longer string.
+ *
+ * @param {*} string1
+ * @param {*} string2
+ * @returns
+ */
+function concatenate2StringHasSameLength(string1, string2) {
+  if (!string1 || !string2) {
+    return '';
+  }
+
+  if (string1.length == string2.length) {
+    return string1 + string2;
+  }
+
+  const newstr = Math.abs(string1.length - string2.length)
+  if (string1.length > string2.length) {
+    return string1.substring(newstr) + string2;
+  } else {
+    return string1 + string2.substring(newstr)
+  }
+}
+
+/**
+ * 65. Write a JavaScript program to test whether a string ends with "Script".
+ * The string length must be greater than or equal to 6.
+ * @param {*} givenString
+ * @returns
+ */
+function checkStringEndWithScript(givenString) {
+  if (!givenString || givenString.length < 6) {
+    return '';
+  }
+
+  return givenString.substring(givenString.length - 6) === 'script';
+}
+
+
+
 module.exports = {
   addition,
   convertMintoSec,
@@ -467,4 +845,12 @@ module.exports = {
   checkingNumber,
   checkStringHasScript,
   max3Numbers,
+  closestValueto100,
+  checkGivenNumber,
+  largestNumber,
+  checkGivenString,
+  give3Integer,
+  upperToLowerCase,
+  reverseCase,
+
 }
