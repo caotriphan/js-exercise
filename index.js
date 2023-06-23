@@ -924,6 +924,72 @@ function createNewArray(array) {
   return [array[0], array.at(-1)];
 }
 
+/**
+ * 77. Write a JavaScript program to test whether an array of integers of length 2 contains 1 or 3.
+ * @param {*} array
+ * @returns
+ */
+function testArrayHas13(array) {
+  if (!array) {
+    return [];
+  }
+
+  return array.indexOf(1) !== -1 || array.indexOf(3) !== -1;
+}
+
+/**
+ * 78. Write a JavaScript program to test whether an array of integers of length 2 does not contain 1 or 3.
+ * @param {*} array
+ * @returns
+ */
+function testArrayNothave12(array) {
+  if (!array) {
+    return [];
+  }
+
+  return array.indexOf(1) === -1 || array.indexOf(3) === -1;
+}
+
+/**
+ * 79. Write a JavaScript program to test whether a given array of integers contains 30 and 40 twice.
+ * The array length should be 0, 1, or 2.
+ * @param {*} array
+ * @returns
+ */
+function checkForArrayContain30Or40Twice(array) {
+  if (!array || array.length <= 1) {
+    return false;
+  }
+
+  let count30 = 0;
+  let count40 = 0;
+
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] == 30) {
+      count30++;
+    } else if (array[i] == 40) {
+      count40++;
+    }
+  }
+
+  return count30 == 2 || count40 == 2;
+}
+
+function wrapFirstLastInteger(array) {
+  if (!array || array.length < 1) {
+    return [];
+  }
+
+
+}
+
+
+
+
+
+
+
+
 
 
 
@@ -981,6 +1047,7 @@ module.exports = {
   concatenate2StringHasSameLength,
   getMiddleStringOddLength,
   move3LastCharater,
+  checkForArrayContain30Or40Twice,
 
 
 }

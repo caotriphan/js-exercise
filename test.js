@@ -308,3 +308,11 @@ test('Moving 3 last charater to first should work', () => {
   expect(lib.move3LastCharater('lucas')).toBe('caslu');
   expect(lib.move3LastCharater('concatenate')).toBe('ateconcaten');
 });
+
+test('checking array containing 30 or 40 twice should work', () => {
+  expect(lib.checkForArrayContain30Or40Twice([30, 2, 30, 4])).toEqual(true);
+  expect(lib.checkForArrayContain30Or40Twice([3, 56, 7, 24])).toEqual(false);
+  expect(lib.checkForArrayContain30Or40Twice([123, 40, 16, 40, 40])).toEqual(false);
+  expect(lib.checkForArrayContain30Or40Twice([40])).toEqual(false);
+  expect(lib.checkForArrayContain30Or40Twice([])).toEqual(false);
+});
