@@ -804,6 +804,128 @@ function checkStringEndWithScript(givenString) {
   return givenString.substring(givenString.length - 6) === 'script';
 }
 
+/**
+ * 66. Write a JavaScript program to display the city name if the string begins with "Los" or "New" otherwise return blank.
+ * @param {*} cityName
+ * @returns
+ */
+function displayCityName(cityName) {
+  if (!cityName) {
+    return '';
+  }
+
+  if (cityName.substr(0, 3) === 'Los' || cityName.substr(0, 3) === 'New') {
+    return cityName;
+  }
+  return '';
+}
+
+/**
+ * 67. Write a JavaScript program to create a new string from a given string.
+ * This program removes the first and last characters of the string if the first or last character is 'P'.
+ * Return the original string if the condition is not satisfied.
+ * @param {*} givenString
+ * @returns
+ */
+function removeFirstLastCharacter(givenString) {
+  if (!givenString) {
+    return '';
+  }
+
+  if (givenString[0] === 'p' || givenString[0] === 'P' || givenString[givenString.length - 1] === 'p' || givenString[givenString.length - 1] === 'P') {
+    return givenString.substring(1, givenString.length - 1);
+  }
+
+  return givenString;
+}
+
+/**
+ * 68. Write a JavaScript program to create a new string using the first and last n characters from a given string.
+ * The string length must be larger than or equal to n.
+ * @param {*} givenString
+ * @param {*} n
+ * @returns
+ */
+function createFirstLastNCharacter(givenString, n) {
+  if (!givenString || n <= 0 || givenString.length < n) {
+    return '';
+  }
+
+  const firstStr = givenString.substr(0, n);
+  const lastStr = givenString.substr(givenString.length - n, n);
+  return firstStr + lastStr;
+}
+
+/**
+ * 69. Write a JavaScript program to compute the sum of three elements of a given array of integers of length 3.
+ * @param {*} param0
+ * @returns
+ */
+function sum3ElementArray([num1, num2, num3]) {
+  return sum = num1 + num2 + num3;
+}
+
+/**
+ * 70. Write a JavaScript program to rotate the elements left in a given array of integers of length 3.
+ * @param {*} array
+ * @returns
+ */
+function rotateElementLeft(array) {
+  return [array[1], array[2], array[0]];
+}
+
+/**
+ * 71. Write a JavaScript program to check whether 1 appears in the first or last position of a given array of integers.
+ * The array length must be larger than or equal to 1.
+ * @param {*} array
+ * @returns
+ */
+function check1AppearInArray(array) {
+  if (array.length < 1 || !array) {
+    return 0;
+  }
+
+  return array[0] === 1 || array[array.length - 1] === 1;
+}
+
+/**
+ * 73. Write a JavaScript program to reverse the elements of a given array of integers of length 3.
+ * @param {*} array
+ * @returns
+ */
+const reverseArray = (array) => array.reverse();
+
+/**
+ * 75. Write a JavaScript program to create an array taking the middle elements of the two arrays of integer and each length 3.
+ * @param {*} array
+ * @returns
+ */
+function findTheLargestElement(array) {
+  if (!array) {
+    return '';
+  }
+
+  const largestNumber = Math.max(array[0], array.at(-1));
+
+  return array.fill(largestNumber);
+}
+
+/**
+ * 76. Write a JavaScript program to create an array by taking the first and last elements from a given array of integers.
+ * The length must be larger than or equal to 1.
+ * @param {*} array
+ * @returns
+ */
+function createNewArray(array) {
+  if (!array || array.length < 1) {
+    return [];
+  }
+
+  return [array[0], array.at(-1)];
+}
+
+
+
 
 
 module.exports = {
@@ -852,5 +974,13 @@ module.exports = {
   give3Integer,
   upperToLowerCase,
   reverseCase,
+  createNewArray,
+  findTheLargestElement,
+  createFirstLastNCharacter,
+  removeFirstLastCharacter,
+  concatenate2StringHasSameLength,
+  getMiddleStringOddLength,
+  move3LastCharater,
+
 
 }

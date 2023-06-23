@@ -266,3 +266,45 @@ test('Reverse case should work', () => {
   expect(lib.reverseCase('Tri')).toBe('tRI');
   expect(lib.reverseCase('caotriphan')).toBe('CAOTRIPHAN');
 });
+
+test('Creating new array should work', () => {
+  expect(lib.createNewArray([1, 2, 3, 4])).toEqual([1, 4]);
+  expect(lib.createNewArray([3, 56, 7, 24])).toEqual([3, 24]);
+  expect(lib.createNewArray([123, 24, 16, 97])).toEqual([123, 97]);
+});
+
+test('Finding the largest Element should work', () => {
+  expect(lib.findTheLargestElement([1, 2, 3, 4])).toEqual([4, 4, 4, 4]);
+  expect(lib.findTheLargestElement([3, 56, 7, 24])).toEqual([24, 24, 24, 24]);
+  expect(lib.findTheLargestElement([123, 24, 16, 97])).toEqual([123, 123, 123, 123]);
+});
+
+test('Creating first and last n character should work', () => {
+  expect(lib.createFirstLastNCharacter('tiphan', 2)).toBe('tian');
+  expect(lib.createFirstLastNCharacter('Tri', 3)).toBe('TriTri');
+  expect(lib.createFirstLastNCharacter('caotriphan', 4)).toBe('caotphan');
+});
+
+test('Remove first and last character should work', () => {
+  expect(lib.removeFirstLastCharacter('tiphanp')).toBe('iphan');
+  expect(lib.removeFirstLastCharacter('Tri')).toBe('Tri');
+  expect(lib.removeFirstLastCharacter('caotriphan')).toBe('caotriphan');
+});
+
+test('Concatenating 2 string has the same length should work', () => {
+  expect(lib.concatenate2StringHasSameLength('tiphanp', 'tri')).toBe('anptri');
+  expect(lib.concatenate2StringHasSameLength('Tri', 'phancao')).toBe('Tricao');
+  expect(lib.concatenate2StringHasSameLength('caotriphan', 'lucas')).toBe('iphanlucas');
+});
+
+test('getting the middle string has an odd length should work', () => {
+  expect(lib.getMiddleStringOddLength('phancaotri')).toBe('');
+  expect(lib.getMiddleStringOddLength('lucas')).toBe('uca');
+  expect(lib.getMiddleStringOddLength('concatenate')).toBe('ate');
+});
+
+test('Moving 3 last charater to first should work', () => {
+  expect(lib.move3LastCharater('phancaotri')).toBe('triphancao');
+  expect(lib.move3LastCharater('lucas')).toBe('caslu');
+  expect(lib.move3LastCharater('concatenate')).toBe('ateconcaten');
+});
