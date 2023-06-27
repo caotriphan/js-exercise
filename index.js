@@ -975,15 +975,258 @@ function checkForArrayContain30Or40Twice(array) {
   return count30 == 2 || count40 == 2;
 }
 
-function wrapFirstLastInteger(array) {
+/**
+ * 80. Write a JavaScript program to swap the first and last elements of a given array of integers.
+ * The array length should be at least 1.
+ * @param {*} array
+ * @returns
+ */
+function swapFirstLastInteger(array) {
   if (!array || array.length < 1) {
     return [];
   }
 
+  const newString = array.join('');
 
+  return (newString.at(-1) + newString.substring(1, newString.at(-1)) + newString[0]).split('');
 }
 
+/**
+ * 81. Write a JavaScript program to add two digits to a given positive integer of length two.
+ * @param {*} number
+ * @returns
+ */
+function add2Digit(number) {
+  if (!number || number < 10) {
+    return 0;
+  }
 
+  return (number % 10) + Math.floor(number / 10);
+}
+
+/**
+ * 82. Write a JavaScript program to add two positive integers without carrying.
+ * @param {*} num1
+ * @param {*} num2
+ * @returns
+ */
+function add2IntegerWithoutCarrying(num1, num2) {
+  if (!num1 || !num2) {
+    return 0;
+  }
+
+  let result = 0;
+  let x = 0;
+  while (num1 > 0 && num2 > 0) {
+    result += x * ((num1 + num2) % 10);
+    num1 = Math.floor(num1 / 10);
+    num1 = Math.floor(num2 / 10);
+    x *= 10;
+  }
+
+  return result;
+}
+
+/**
+ * 83. Write a JavaScript program to find the longest string from a given array of strings.
+ * @param {*} array
+ * @returns
+ */
+function findLongestString(array) {
+  if (!array || array.length < 1) {
+    return '';
+  }
+
+  let result = array[0];
+  for (let i = 1; i < array.length; i++) {
+    if (array[i].length > result.length)
+      result = array[i];
+  }
+
+  return result;
+}
+
+/**
+ * 84. Write a JavaScript program to replace each character in a given string with the next in the English alphabet.
+Note: 'a' will be replace by 'b' or 'z' would be replaced by 'a'.
+ * @param {*} givenString
+ * @returns
+ */
+function replaceCharater(givenString) {
+  if (!givenString) {
+    return '';
+  }
+
+  const newarr = givenString.split('');
+  for (let i = 0; i < newarr.length; i++) {
+    let n = newarr[i].charCodeAt() - 'a'.charCodeAt();
+    n = (n + 1) % 26;
+    newarr[i] = String.fromCharCode(n + 'a'.charCodeAt());
+  }
+  return newarr.join('');
+}
+/**
+ * 85. Write a JavaScript program to divide a given array of positive integers into two parts.
+ * First element belongs to the first part, second element belongs to the second part, and third element belongs to the first part and so on.
+ * Now compute the sum of two parts and store it in an array of size two.
+ * @param {*} arr
+ * @returns
+ */
+function sum2PartArray(arr) {
+  if (!arr || arr.length < 2) {
+    return [];
+  }
+
+  let newarr = [0, 0];
+  for (let i = 0; i < arr.length; i++) {
+    i % 2 ? (newarr[1] += arr[i]) : (newarr[0] += arr[i]);
+  }
+
+  return newarr;
+}
+
+/**
+ * 86. Write a JavaScript program to find the types of a given angle.
+Types of angles:
+Acute angle: An angle between 0 and 90 degrees.
+Right angle: An 90 degree angle.
+Obtuse angle: An angle between 90 and 180 degrees.
+Straight angle: A 180 degree angle.
+ * @param {*} givenAngle
+ * @returns
+ */
+function findTypeOfGivenAngle(givenAngle) {
+  if (!givenAngle || givenAngle < 0) {
+    return '';
+  }
+
+  if (givenAngle < 90) {
+    return 'Acute angle';
+  }
+  if (givenAngle == 90) {
+    return 'Right angle';
+  }
+  if (givenAngle < 180) {
+    return 'Obtuse angle';
+  }
+  if (givenAngle == 180) {
+    return 'Straight angle';
+  }
+}
+
+/**
+ * 87. Write a JavaScript program to determine if two arrays of integers of the same length are similar.
+ * The arrays will be similar if one array can be obtained from another array by swapping at most one pair of elements.
+ * @param {*} arr1
+ * @param {*} arr2
+ * @returns
+ */
+function isSameArray(arr1, arr2) {
+  if (
+    !arr1 ||
+    !arr2 ||
+    arr1.length < 1 ||
+    arr2.length < 1 ||
+    arr1.length !== arr2.length
+  ) {
+    return false;
+  }
+
+  for (let i = 0; i < arr1.length; i++) {
+    if (arr1[i] !== arr2[i]) {
+      return false;
+    }
+  }
+
+  return true;
+}
+
+function isSimilarArray(arr1, arr2) {
+  if (isSameArray(arr1, arr2)) {
+    return true;
+  }
+
+  for (let i = 0; i < arr1.length - 1; i++) {
+    for (let j = i + 1; j < arr1.length; j++) {
+      let temp = arr1[i];
+      arr1[i] = arr1[j];
+      arr1[j] = temp;
+
+      if (isSameArray(arr1, arr2)) {
+        return true;
+      }
+
+      temp = arr1[i];
+      arr1[i] = arr1[j];
+      arr1[j] = temp;
+    }
+  }
+  return false;
+}
+
+/**
+ * Sort array from less to more
+ * @param {*} arr
+ * @returns
+ */
+function sortArray(arr) {
+  if (!arr || arr.length < 2) {
+    return arr;
+  }
+
+  for (let i = 0; i < arr.length - 1; i++) {
+    for (let j = i + 1; j < arr.length; j++) {
+      if (arr[i] > arr[j]) {
+        let temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+      }
+    }
+  }
+
+  return arr;
+}
+
+/**
+ * 88. Write a JavaScript program that takes two integers and a divisor.
+ * If the given divisor divides both integers and does not divide either, two specified integers are similar.
+ * Check whether two integers are similar or not.
+ * @param {*} num1
+ * @param {*} num2
+ * @param {*} divisor
+ * @returns
+ */
+function check2IntegerSimilarOrNot(num1, num2, divisor) {
+  if (divior === 0 || !num1 || !num2 || !divisor) {
+    return false;
+  }
+
+  return (
+    (num1 % divisor === 0 && num2 % divisor === 0) ||
+    (num1 % divisor !== 0 && num2 % divisor !== 0)
+  );
+}
+
+/**
+ * 89. Write a JavaScript program to check whether it is possible to replace $ in a given expression x $ y = z with one of the four signs +, -, * or / to obtain a correct expression.
+For example x = 10, y = 30 and z = 300, we can replace $ with a multiple operator (*) to obtain x * y = z
+ * @param {*} num1
+ * @param {*} num2
+ * @param {*} num3
+ * @returns
+ */
+function replaceComputing(num1, num2, num3) {
+  if (!num1 || !num2 || !num3) {
+    return false;
+  }
+
+  return (
+    num1 + num2 === num3 ||
+    num1 - num2 === num3 ||
+    num1 * num2 === num3 ||
+    num1 / num2 === num3
+  );
+}
 
 
 
@@ -1048,6 +1291,7 @@ module.exports = {
   getMiddleStringOddLength,
   move3LastCharater,
   checkForArrayContain30Or40Twice,
-
+  isSimilarArray,
+  swapFirstLastInteger,
 
 }

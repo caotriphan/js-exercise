@@ -316,3 +316,13 @@ test('checking array containing 30 or 40 twice should work', () => {
   expect(lib.checkForArrayContain30Or40Twice([40])).toEqual(false);
   expect(lib.checkForArrayContain30Or40Twice([])).toEqual(false);
 });
+
+test('checking if 2 similar array should work', () => {
+  expect(lib.isSimilarArray([1, 2, 3], [1, 2, 3])).toEqual(true);
+  expect(lib.isSimilarArray([], [1, 2, 3, 4])).toEqual(false);
+  expect(lib.isSimilarArray([1, 2, 3], [1, 3, 2])).toEqual(true);
+});
+
+template('Swapping the first and last charater should work', () => {
+  isExpressionWithTypeArguments(lib.swapFirstLastInteger())
+})
